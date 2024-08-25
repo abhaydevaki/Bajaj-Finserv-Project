@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21BSA10126</title> <!-- Roll Number as title -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>JSON Input</h1>
+        <textarea id="json-input" rows="10" cols="50" placeholder='Enter JSON like {"data": ["A", "B", "1", "2", "c"]}'></textarea>
+        <br/>
+        <button id="submit-btn" onclick="submitData()">Submit</button>
+        <p id="error-message" class="error"></p>
+
+        <div id="dropdown-container" class="hidden">
+            <h2>Select Data to Display:</h2>
+            <select id="data-select" multiple>
+                <option value="alphabets">Alphabets</option>
+                <option value="numbers">Numbers</option>
+                <option value="highest_lowercase_alphabet">Highest Lowercase Alphabet</option>
+            </select>
+            <button onclick="displaySelectedData()">Display</button>
+        </div>
+
+        <h2>Results</h2>
+        <pre id="response"></pre>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
