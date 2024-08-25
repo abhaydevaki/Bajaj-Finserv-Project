@@ -13,9 +13,10 @@ def index():
 def process_data():
     try:
         data = request.json.get('data', [])
-        user_id = "john_doe_17091999"
-        email = "john@xyz.com"
-        roll_number = "ABCD123"
+        user_id = "Abhay_21BSA10126"
+        email = "abhay.devaki2021@vitbhopal.ac.in"
+        roll_number = "21BSA10126"
+        print(data)
 
         numbers = [item for item in data if item.isdigit()]
         alphabets = [item for item in data if item.isalpha()]
